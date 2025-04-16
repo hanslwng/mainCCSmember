@@ -7,7 +7,7 @@
 }
 
 body {
-    background: url('bglogo.png') no-repeat center center fixed;
+    background: url('images/bglogo.png') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
     display: flex;
