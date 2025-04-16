@@ -1,0 +1,273 @@
+
+/* Programming Languages Grid */
+.languages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.language-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    background: var(--card-bg);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+.language-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(225deg, transparent, rgba(0, 255, 242, 0.1));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.language-card:hover::before {
+    opacity: 1;
+}
+
+.language-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.language-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 2px solid var(--primary-color);
+    padding: 2px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1); /* Add background color */
+    aspect-ratio: 1 / 1; /* Ensure perfect circle */
+    display: block; /* Prevent layout shifts */
+}
+
+.language-card:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+.language-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px rgba(0, 255, 242, 0.3);
+}
+
+.language-card:hover h3 {
+    transform: scale(1.05);
+}
+
+/* New features for language cards */
+.experience-level {
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0; /* Remove bottom margin */
+    text-align: center;
+}
+
+.skill-level {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+.skill-level span {
+    position: absolute;
+    height: 100%;
+    width: 0;
+    left: 0;
+    background: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--primary-color);
+    transition: width 1.5s ease-in-out;
+}
+
+.experience-level p {
+    margin: 0.25rem 0 0 0; /* Adjust top margin only */
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.language-description {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: auto;
+    padding: 0 10px;
+    line-height: 1.4;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 2;
+}
+
+.language-card:hover .language-description {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tech-glow {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.5s ease;
+    filter: blur(30px);
+    z-index: 1;
+}
+
+.language-card:hover .tech-glow {
+    opacity: 0.4;
+    bottom: -20px;
+}
+
+/* Language card specific colors */
+.language-card:nth-child(1) { /* Python */
+    background: linear-gradient(145deg, rgba(55, 118, 171, 0.1), rgba(55, 118, 171, 0.05));
+}
+.language-card:nth-child(1) .tech-glow { background: #3776AB; }
+
+.language-card:nth-child(2) { /* HTML */
+    background: linear-gradient(145deg, rgba(228, 77, 38, 0.1), rgba(228, 77, 38, 0.05));
+}
+.language-card:nth-child(2) .tech-glow { background: #E44D26; }
+
+.language-card:nth-child(3) { /* CSS */
+    background: linear-gradient(145deg, rgba(38, 77, 228, 0.1), rgba(38, 77, 228, 0.05));
+}
+.language-card:nth-child(3) .tech-glow { background: #264DE4; }
+
+.language-card:nth-child(4) { /* MySQL */
+    background: linear-gradient(145deg, rgba(0, 117, 143, 0.1), rgba(0, 117, 143, 0.05));
+}
+.language-card:nth-child(4) .tech-glow { background: #00758F; }
+
+.language-card:nth-child(5) { /* Firebase */
+    background: linear-gradient(145deg, rgba(255, 202, 40, 0.1), rgba(255, 202, 40, 0.05));
+}
+.language-card:nth-child(5) .tech-glow { background: #FFCA28; }
+
+/* Add animation for the skill level on load */
+@keyframes skillFill {
+    from { width: 0; }
+    to { width: var(--fill-width); }
+}
+
+/* Initialize these with appropriate skill levels */
+.language-card:nth-child(1) .skill-level span { --fill-width: 75%; animation: skillFill 1.5s ease-out forwards; }
+.language-card:nth-child(2) .skill-level span { --fill-width: 90%; animation: skillFill 1.5s ease-out forwards; }
+.language-card:nth-child(3) .skill-level span { --fill-width: 85%; animation: skillFill 1.5s ease-out forwards; }
+.language-card:nth-child(4) .skill-level span { --fill-width: 70%; animation: skillFill 1.5s ease-out forwards; }
+.language-card:nth-child(5) .skill-level span { --fill-width: 65%; animation: skillFill 1.5s ease-out forwards; }
+
+/* Add a subtle animation to all cards on page load */
+@keyframes cardEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.language-card {
+    animation: cardEntrance 0.8s ease-out;
+    animation-fill-mode: backwards;
+}
+
+/* Stagger the animation for each card */
+.language-card:nth-child(1) { animation-delay: 0.1s; }
+.language-card:nth-child(2) { animation-delay: 0.2s; }
+.language-card:nth-child(3) { animation-delay: 0.3s; }
+.language-card:nth-child(4) { animation-delay: 0.4s; }
+.language-card:nth-child(5) { animation-delay: 0.5s; }
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .languages-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .languages-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .language-card {
+        padding: 1.5rem 1rem;
+        min-height: 280px;
+    }
+
+    .language-card img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .language-card h3 {
+        font-size: 1rem;
+    }
+    
+    .language-description {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .languages-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .language-card {
+        padding: 1.5rem 1rem;
+        min-height: 250px;
+    }
+
+    .language-card img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .experience-level {
+        margin: 5px 0 10px;
+    }
+    
+    .language-description {
+        display: none; /* Hide descriptions on very small screens */
+    }
+}

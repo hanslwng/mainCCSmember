@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaypee Rabie - Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
+</head>
+
+<body class="overflow-x-hidden font-Outfit leading-8 dark:bg-darkTheme dark:text-white relative">
+    <div class="absolute top-0 left-0 w-full h-full -z-10 
+                bg-[radial-gradient(#ccc_1px,transparent_1px)] 
+                dark:bg-[radial-gradient(#333_1px,transparent_1px)] 
+                bg-[size:20px_20px]">
+    </div>
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
+        <img src="jaypee/images/header-bg-color.png" alt="" class="w-full">
+    </div>
+    <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-1 flex item-center justify-between z-50 ">
+        <img src="jaypee/images/lsp.png" alt="" style="width: 60px;" class="w-28 cursor-pointer mr-14 dark:block  ">
+        <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white
+         shadow-sm bg-opacity-50 font-Ovo
+         dark:border dark:border-white/50 dark:bg-transparent">
+
+            <li><a href="#top">Home</a></li>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#services">Skills</a></li>
+            <li><a href="#work">My Work</a></li>
+            <li><a href="#Contact">Contact me</a></li>
+
+        </ul>
+        <div class="flex item-center gap-4">
+            <button onclick="toggleTheme()">
+                <img src="jaypee/images/moon_icon.png" class="w-6 dark:hidden">
+                <img src="jaypee/images/sun_icon.png" class="w-6 hidden dark:block">
+            </button>
+
+            <button class="block md:hidden ml-3" onclick="openMenu()">
+                <img src="jaypee/images/menu-black.png" class="w-6 dark:hidden ">
+                <img src="images/jaypee/images/menu-black.png" class="w-6 hidden dark:block ">
+            </button>
+
+        </div>
+        <ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0
+          bottom-0 w-64 z-50 h-screen bg-rose-50 transition-duration-500 font-Ovo dark:bg-[#2a004a] dark:text-white">
+
+            <div class="absolute right-6 top-6" onclick="CloseMenu()">
+                <img src="jaypee/images/close-black.png" class="w-5 cursor-pointer dark:hidden" alt="">
+                <img src="jaypee/images/close-white.png" class="w-5 cursor-pointer hidden dark:block alt="">
+            </div>
+            <li><a href=" #top" onclick="CloseMenu()">Home</a></li>
+                <li><a href="#about" onclick="CloseMenu()">About me</a></li>
+                <li><a href="#services" onclick="CloseMenu()">Skills</a></li>
+                <li><a href="#work" onclick="CloseMenu()">My Work</a></li>
+                <li><a href="#Contact" onclick="CloseMenu()">Contact me</a></li>
+        </ul>
+    </nav>
+
+    <div class="w-11/12 pt-14 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 ">
+        <img src="jaypee/images/jp.png" class="rounded-full w-32" alt="">
+        <h3 class="flex item-center gap-2 text-xl  md:text-2xl mb-3 font-Ovo">Hi! I'm Jaypee Rabie <img
+                src="jaypee/images/hand-icon.png" class="w-6" alt=""></h3>
+        <h1 class="text-3xl sm:text-6xl lg:text-[50px] font-semibold font-Ovo ">2nd-year college student at Laguna State Polytechnic University – SCC.</h1>
+        <p class="max-w-2xl mx-auto font-Ovo">Currently taking up a Bachelor of Science in Information Technology.
+        </p>
+        <div class="mt-6">
+            <button onclick="document.getElementById('cvModal').classList.remove('hidden')"
+              class="px-6 py-3 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition duration-300">
+              📄 View Curriculum Vitae
+            </button>
+          </div>
+        </div>
+        
+        <div id="cvModal" class="fixed inset-0 bg-black/70 flex items-center justify-center z-50 hidden">
+          <div class="bg-white rounded-lg max-h-[90vh] overflow-y-auto p-4 max-w-3xl w-[90%] relative">
+        
+            <button onclick="document.getElementById('cvModal').classList.add('hidden')"
+              class="absolute top-4 right-4 text-3xl font-bold text-gray-600 hover:text-black z-50">
+              &times;
+            </button>
+        
+            <img src="jaypee/images/res.png" alt="Jaypee's CV" class="w-full rounded-md mt-10">
+          </div>
+        </div>
+
+    <div id="about" class="w-full px-[12%] py-10 scroll-mt-20">
+        <h4 class="text-center mb-2 text-lg font-Ovo">Introduction</h4>
+        <h2 class="text-center text-5xl font-semibold font-Ovo ">About me</h2>
+
+        <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
+            <div class="max-w-max mx-auto relative">
+                <img src="jaypee/images/jp.png" class="w-64 sm:w-80 rounded-3xl max-w-none" alt="">
+
+
+                <div class="bg-white w-1/2 aspect-square absolute right-0 bottom-0
+         rounded-full translate-x-1/4 translate-y-1/3 
+         shadow[0_4px_55px_rgba(149,0,162,0.15)] flex items-center justify-center">
+                    <img src="jaypee/images/circular-text.png" class="w-full animate-spin_slow">
+                    <img src="jaypee/images/lspu.png" class="w-1/4 absolute top-1/2 left-1/2 
+         -translate-x-1/2 -translate-y-1/2" alt="">
+
+                </div>
+            </div>
+            <div class="flex-1">
+                <p class="mb-10 max-w-2xl font-Ovo">I’m a 2nd-year college student currently taking up a Bachelor of Science in Information Technology at Laguna State Polytechnic University – SCC.
+
+                    I have hands-on experience developing various projects using Java, Python, and C#, as well as creating Android applications. My passion for coding continues to grow as I explore different programming languages and frameworks.
+                    
+                    I’m particularly interested in software development and mobile app design, and I aim to become a full-stack developer in the future. I enjoy solving real-world problems through technology and am always open to learning new tools and collaborating on exciting projects.
+                    
+                    Outside of academics, I enjoy playing badminton, volleyball, and online games, which help me stay balanced and creative.</p>
+
+                <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+                    <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:lightHover hover:-translate-y-1
+                     duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white
+                     dark:hover:bg-darkHover/50  ">
+                        <img src="jaypee/images/code-icon.png" class="w-7 mt-3 dark:hidden" alt="">
+                        <img src="jaypee/images/code-icon-dark.png" class="w-7 mt-3 hidden dark:block" alt="">
+
+                        <h3 class="my-4 font-semibold text-gray-700 dark:text-white">languages</h3>
+                        <p class="text-gray-600 text-sm dark:text-white/80">HtML,CSS,Javascript,
+                            Java,c#,Phyton</p>
+                    </li>
+
+                    <li class="border-[0.5px] border-grey-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1
+                    duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white
+                    dark:hover:bg-darkHover/50 ">
+                        <img src="jaypee/images/edu-icon.png" class="w-7 mt-3 dark:hidden" alt="">
+                        <img src="jaypee/images/edu-icon-dark.png" class="w-7 mt-3 hidden dark:block" alt="">
+
+                        <h3 class="my-4 font-semibold text-gray-700 dark:text-white ">Education</h3>
+                        <p class="text-gray-600 text-sm dark:text-white/80">BS-Information Technology</p>
+                    </li>
+
+                    <li class="border-[0.5px] border-grey-400 rounded-xl p-6 cursor-pointer hover:bg-[lightHover hover:-translate-y-1
+                   duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white
+                   dark:hover:bg-darkHover/50 ">
+                        <img src="jaypee/images/project-icon.png" class="w-7 mt-3 dark:hidden" alt="">
+                        <img src="jaypee/images/project-icon-dark.png" class="w-7 mt-3 hidden dark:block" alt="">
+
+                        <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Projects</h3>
+                        <p class="text-gray-600 text-sm dark:text-white/80">Buid more than 5 projects</p>
+                    </li>
+                </ul>
+
+                <h4 class="my-6 text-grey-700 font-Ovo dark:text-white/80">Tools i used</h4>
+
+                <ul class="flex items-center gap-3 sm:gap-5 ">
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border
+                     border-gray-400 rounded-lg cursor-pointer
+                     hover:-translate-y-1 duration-500">
+                        <img src="jaypee/images/vscode.png" class="w-5 sm:w-7" alt="">
+                    </li>
+
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border
+                    border-gray-400 rounded-lg cursor-pointer
+                    hover:-translate-y-1 duration-500">
+                        <img src="jaypee/images/and.png" class="w-5 sm:w-7" alt="">
+                    </li>
+
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border
+                   border-gray-400 rounded-lg cursor-pointer
+                   hover:-translate-y-1 duration-500">
+                        <img src="jaypee/images/net.png" class="w-5 sm:w-7" alt="">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border
+                  border-gray-400 rounded-lg cursor-pointer
+                  hover:-translate-y-1 duration-500">
+                        <img src="jaypee/images/figma.png" class="w-5 sm:w-7" alt="">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border
+                 border-gray-400 rounded-lg cursor-pointer
+                 hover:-translate-y-1 duration-500">
+                        <img src="jaypee/images/git.png" class="w-5 sm:w-7" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+<div id="services" class="w-full px-[12%] py-10 scroll-mt-20">
+
+    <h4 class="text-center mb-2 text-lg font-Ovo">What I can do</h4>
+    <h2 class="text-center text-5xl font-semibold font-Ovo">My Skills</h2>
+    
+
+    <div class="grid grid-cols-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 my-10">
+
+        <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:bg-darkHover dark:hover:bg-darkHover dark:hover:shadow-white">
+            <img src="jaypee/images/web-icon.png" class="w-10" alt="">
+            <h3 class="text-lg my-4 text-gray-700 dark:text-white">Web Design</h3>
+            <p class="text-sm text-gray-600 leading-5 dark:text-white/80">Web Development is the process of building, maintaining, and optimizing websites...</p>
+
+            <div class="mt-5">
+                <label class="text-sm text-gray-700 dark:text-white">Skill Level</label>
+                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
+                </div>
+                <p class="text-sm mt-2 text-gray-600 dark:text-white/80">Level: 60%</p>
+            </div>
+        </div>
+
+        <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:bg-darkHover dark:hover:bg-darkHover dark:hover:shadow-white">
+            <img src="jaypee/images/mobile-icon.png" class="w-10" alt="">
+            <h3 class="text-lg my-4 text-gray-700 dark:text-white">Android App Development</h3>
+            <p class="text-sm text-gray-600 leading-5 dark:text-white/80">Android App development is the process of building, customizing, and managing information...</p>
+
+            <div class="mt-5">
+                <label class="text-sm text-gray-700 dark:text-white">Skill Level</label>
+                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                    <div class="bg-green-600 h-2.5 rounded-full" style="width: 60%"></div>
+                </div>
+                <p class="text-sm mt-2 text-gray-600 dark:text-white/80">Level: 80%</p>
+            </div>
+        </div>
+
+        <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:bg-darkHover dark:hover:bg-darkHover dark:hover:shadow-white">
+            <img src="jaypee/images/ui-icon.png" class="w-10" alt="">
+            <h3 class="text-lg my-4 text-gray-700 dark:text-white">UI UX Design</h3>
+            <p class="text-sm text-gray-600 leading-5 dark:text-white/80">UI/UX design focuses on creating visually appealing, intuitive, and user-centered digital experiences...</p>
+
+            <div class="mt-5">
+                <label class="text-sm text-gray-700 dark:text-white">Skill Level</label>
+                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                    <div class="bg-yellow-600 h-2.5 rounded-full" style="width: 70%"></div>
+                </div>
+                <p class="text-sm mt-2 text-gray-600 dark:text-white/80">Level: 60%</p>
+            </div>
+        </div>
+
+        <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:bg-darkHover dark:hover:bg-darkHover dark:hover:shadow-white">
+            <img src="jaypee/images/graphics-icon.png" class="w-10" alt="">
+            <h3 class="text-lg my-4 text-gray-700 dark:text-white">Graphic Design</h3>
+            <p class="text-sm text-gray-600 leading-5 dark:text-white/80">Graphic design is the art and practice of creating visual content to communicate messages effectively...</p>
+
+            <div class="mt-5">
+                <label class="text-sm text-gray-700 dark:text-white">Skill Level</label>
+                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                    <div class="bg-red-600 h-2.5 rounded-full" style="width: 75%"></div>
+                </div>
+                <p class="text-sm mt-2 text-gray-600 dark:text-white/80">Level: 55%</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+    <div id="work" class="w-full px-[12%] py-10 scroll-mt-20">
+
+        <h4 class="text-center mb-2 text-lg font-Ovo">My Portfolio</h4>
+        <h2 class="text-center text-5xl font-semibold font-Ovo">My Latest Work</h2>
+        <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">Welcome to my web development Portfolio!
+            Explore the collecton of projects showcasing my expertise in front-end-development.
+        </p>
+<div class="flex justify-center mt-6">
+    <a href="https://github.com/J4ype3?tab=repositories" target="_blank" rel="noopener noreferrer"
+       class="inline-flex items-center gap-2 px-6 py-3 bg-black text-white font-semibold rounded-full hover:bg-gray-800 transition">
+      <img src="jaypee/images/git1.jpg" alt="GitHub" class="w-5 h-5" />
+      View My GitHub
+    </a>
+  </div>
+  
+        <div class="w-full px-4 py-16">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+              <div class="relative group bg-white rounded-lg overflow-hidden shadow-lg">
+                <div class="relative w-full h-64 overflow-hidden">
+                  <div class="slide-container flex transition-transform duration-500" data-slide="0">
+                    <img src="jaypee/images/jav.png" class="w-full h-64 object-cover flex-shrink-0" />
+                    <img src="jaypee/images/lib1.jpg" class="w-full h-64 object-cover flex-shrink-0" />
+                    <img src="jaypee/images/lib2.jpg" class="w-full h-64 object-cover flex-shrink-0" />
+                    <img src="jaypee/images/lib3.jpg" class="w-full h-64 object-cover flex-shrink-0" />
+                    <img src="jaypee/images/lib4.jpg" class="w-full h-64 object-cover flex-shrink-0" />
+                    <img src="jaypee/images/lib5.jpg" class="w-full h-64 object-cover flex-shrink-0" />
+                    <img src="jaypee/images/lib6.jpg" class="w-full h-64 object-cover flex-shrink-0" />
+                    <img src="jaypee/images/lib7.jpg" class="w-full h-64 object-cover flex-shrink-0" />
+                    <img src="jaypee/images/lib8.jpg" class="w-full h-64 object-cover flex-shrink-0" />
+                    <img src="jaypee/images/lib9.jpg" class="w-full h-64 object-cover flex-shrink-0" />
+                  </div>
+          
+                  <button class="prev absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 text-white rounded-full p-2 hidden group-hover:block">&#10094;</button>
+                  <button class="next absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 text-white rounded-full p-2 hidden group-hover:block">&#10095;</button>
+                </div>
+          
+                <div class="p-4 flex items-center justify-between">
+                  <div>
+                    
+                    <p class="text-sm text-gray-700 font-semibold">Library Management System: Java Based Project</p>
+                  </div>
+                  <div class="border rounded-full border-black w-9 h-9 flex items-center justify-center shadow hover:bg-lime-300 transition">
+                    <img src="jaypee/images/send-icon.png" class="w-5" alt="">
+                  </div>
+                </div>
+              </div>
+          
+              <div class="relative group bg-white rounded-lg overflow-hidden shadow-lg">
+                <div class="relative w-full h-64 overflow-hidden">
+                  <div class="slide-container flex transition-transform duration-500" data-slide="0">
+                    <img src="jaypee/images/task1.png" class="w-full h-64 object-cover flex-shrink-0" />
+                    <img src="jaypee/images/task2.png" class="w-full h-64 object-cover flex-shrink-0" />
+                    <img src="jaypee/images/task3.png" class="w-full h-64 object-cover flex-shrink-0" />
+                  </div>
+          
+                  <!-- Arrows -->
+                  <button class="prev absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 text-white rounded-full p-2 hidden group-hover:block">&#10094;</button>
+                  <button class="next absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 text-white rounded-full p-2 hidden group-hover:block">&#10095;</button>
+                </div>
+          
+                <div class="p-4 flex items-center justify-between">
+                  <div>
+                    
+                    <p class="text-sm text-gray-700 font-semibold">Task manager app: Android Studio - Java</p>
+                  </div>
+                  <div class="border rounded-full border-black w-9 h-9 flex items-center justify-center shadow hover:bg-lime-300 transition">
+                    <img src="jaypee/images/send-icon.png" class="w-5" alt="">
+                  </div>
+                </div>
+              </div>
+          
+              <div class="relative group bg-white rounded-lg overflow-hidden shadow-lg">
+                <div class="relative w-full h-64 overflow-hidden">
+                  <div class="slide-container flex transition-transform duration-500" data-slide="0">
+                    <img src="jaypee/images/hal.jpg" class="w-full h-64 object-cover flex-shrink-0" />
+                    <img src="jaypee/images/hal1.png" class="w-full h-64 object-cover flex-shrink-0" />
+                    <img src="jaypee/images/hal2.png" class="w-full h-64 object-cover flex-shrink-0" />
+                  </div>
+          
+                  <button class="prev absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 text-white rounded-full p-2 hidden group-hover:block">&#10094;</button>
+                  <button class="next absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 text-white rounded-full p-2 hidden group-hover:block">&#10095;</button>
+                </div>
+          
+                <div class="p-4 flex items-center justify-between">
+                  <div>
+                    
+                    <p class="text-sm text-gray-700 font-semibold">E-commerce: Python Based Project</p>
+                  </div>
+                  <div class="border rounded-full border-black w-9 h-9 flex items-center justify-center shadow hover:bg-lime-300 transition">
+                    <img src="jaypee/images/send-icon.png" class="w-5" alt="">
+                  </div>
+                </div>
+              </div>
+          
+            </div>
+          </div>
+          
+          <script>
+            document.querySelectorAll('.slide-container').forEach(container => {
+              const slides = container.querySelectorAll('img');
+              const total = slides.length;
+              let index = 0;
+          
+              const updateSlide = () => {
+                container.style.transform = `translateX(-${index * 100}%)`;
+              };
+          
+              const card = container.closest('.group');
+              const nextBtn = card.querySelector('.next');
+              const prevBtn = card.querySelector('.prev');
+          
+              nextBtn.addEventListener('click', () => {
+                index = (index + 1) % total;
+                updateSlide();
+              });
+          
+              prevBtn.addEventListener('click', () => {
+                index = (index - 1 + total) % total;
+                updateSlide();
+              });
+            });
+          </script>
+                     
+        </div>
+        
+    </div>
+
+    <div id="Contact" class="w-full px-[12%] py-10 scroll-mt-20 bg-[url('./images/footer-bg-color.png')] 
+bg-no-repeat bg-[length:90%-auto] bg-center dark:bg-none">
+        <h4 class="text-center mb-2 text-lg">Contact with me </h4>
+        <h2 class="text-center text-5xl font-semibold">Get In Touch</h2>
+        <p class="text-center max-w-2xl mx-auto mt-5 mb-12">I had love to hear from you!
+            If you have any qquestion, Commenrs or feedback, Please use the form below
+        </p>
+        <form action="" class="max-w-2xl mx-auto">
+            <div class=" grid grid-cols-auto  gap-6 mt-10 mb-8">
+                <input type="text" placeholder="Enter Your Name" class="flex-1 p-3 outline-none
+             border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90">
+                <input type="email" placeholder="Enter Your Email" class="flex-1 p-3 outline-none
+             border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90">
+            </div>
+            <textarea placeholder="Enter your message" rows="6" class="w-full p-4 outline-none
+        border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90"></textarea>
+            <button class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black\80
+         text-white rounded-full mx-auto hover: bg-black duration-500 dark:bg-transparent
+         dark:border-[0.5px] dark:bg-darkHover
+        ">Submit now 
+         <img src="images/right-arrow.png "
+                    class="w-4" alt=""></button>
+        </form>
+    </div>
+
+    <div class="mt-20">
+        <div class="text-center">
+            <img src="jaypee/images/lsp.png" class="w-36 mx-auto mb-2 dark:hidden" alt="" style="width: 60px;">
+            <img src="jaypee/images/lsp.png" class="w-36 mx-auto mb-2 hidden dark:block" alt="" style="width: 60px;">
+            <div class="w-max flex items-center gap-2 mx-auto">
+                <img src="jaypee/images/mail_icon.png" class="w-6 dark:hidden" alt="">
+                <img src="jaypee/images/mail_icon_dark.png" class="w-6 hidden dark:block" alt="">
+                j4ypeer4bie@gmail.com
+            </div>
+        </div>
+        <div class="text-center sm:flex items-center justify-between border-t
+     border-grey-400 mx-[10%] mt-12 py-6">
+            <p>&copy;2025 Jaypee Rabie. All right reserved</p>
+            <ul class="flex items-center gap-10 justify-canter mt-4 sm:mt-0">
+
+                <li><a href="https://github.com/J4ype3">Github</a></li>
+                <li><a href="https://www.instagram.com/jaypee.pq/">Instagram</a></li>
+                <li><a href="https://www.facebook.com/jaypee.rabie.18">Facebook</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="jaypee/js/tailwind.config.js"></script>
+    <script src="jaypee/js/jaypee.js"></script>
+</body>
+
+</html>

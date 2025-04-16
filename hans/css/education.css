@@ -1,0 +1,203 @@
+
+/* Education Section */
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.education-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 24px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    min-height: 400px;
+}
+
+.education-card:hover {
+    transform: translateY(-10px);
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 15px 45px rgba(0, 255, 242, 0.2);
+}
+
+.school-logo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.05),
+        rgba(255, 255, 255, 0.02)
+    );
+    opacity: 1;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 2;
+}
+
+.education-card:hover .school-logo {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+}
+
+.school-logo img {
+    max-width: 200px;
+    max-height: 200px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    filter: brightness(0.9) drop-shadow(0 0 10px rgba(0, 255, 242, 0.3));
+    transition: all 0.4s ease;
+    transform: scale(1);
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 0 20px rgba(0, 255, 242, 0.3);
+}
+
+.school-info {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    height: 100%;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.education-card:hover .school-info {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.school-info h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px rgba(0, 255, 242, 0.3);
+}
+
+.school-info .degree {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.school-info .year {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.school-info .description {
+    color: var(--text-color);
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Education card entrance animation */
+.education-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: educationCardEntrance 0.6s ease forwards;
+}
+
+@keyframes educationCardEntrance {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.education-card:nth-child(1) { animation-delay: 0.2s; }
+.education-card:nth-child(2) { animation-delay: 0.4s; }
+.education-card:nth-child(3) { animation-delay: 0.6s; }
+
+/* Responsive adjustments for education section */
+@media (max-width: 768px) {
+    .education-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .education-card {
+        min-height: 350px;
+    }
+
+    .school-logo {
+        position: relative;
+        height: auto;
+        padding: 2rem 0;
+    }
+
+    .school-logo img {
+        width: 150px;
+        height: 150px;
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    .school-info {
+        padding: 1.5rem;
+        opacity: 1;
+        transform: scale(1);
+        position: relative;
+    }
+
+    .education-card:hover .school-logo {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .education-card .school-info {
+        background: rgba(255, 255, 255, 0.03);
+    }
+}
+
+@media (max-width: 480px) {
+    .education-card {
+        min-height: 300px;
+    }
+
+    .school-logo {
+        padding: 1.5rem 0;
+    }
+
+    .school-logo img {
+        width: 120px;
+        height: 120px;
+        max-width: 120px;
+        max-height: 120px;
+    }
+
+    .school-info {
+        padding: 1.25rem;
+    }
+
+    .school-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .school-info .degree {
+        font-size: 0.95rem;
+    }
+
+    .school-info .year {
+        font-size: 0.85rem;
+    }
+
+    .school-info .description {
+        font-size: 0.9rem;
+    }
+}
