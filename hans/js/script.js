@@ -179,15 +179,15 @@ document.addEventListener('DOMContentLoaded', function() {
             { src: 'hans/proj/parteydash.jpg', caption: 'Parteyz Catering Service - Home' }
         ],
         'halou': [
-            { src: 'hans/proj/halouadmin.png', caption: 'Admin Dashboard' },
-            { src: 'hans/proj/haloudash.png', caption: 'dashboard' }
+            { src: 'hans/assets/proj/halouadmin.png', caption: 'Admin Dashboard' },
+            { src: 'hans/assets/proj/haloudash.png', caption: 'dashboard' }
         ],
         'task': [
-            { src: 'hans/proj/dashtask.png', caption: 'TaskMatrix - Home' },
-            { src: 'hans/proj/taskmobile.png', caption: 'Mobile View' },
-            { src: 'hans/proj/app1.png', caption: 'Mobile View' },
-            { src: 'hans/proj/app2.png', caption: 'Mobile View' },
-            { src: 'hans/proj/app3.png', caption: 'Mobile View' }
+            { src: 'hans/assets/proj/dashtask.png', caption: 'TaskMatrix - Home' },
+            { src: 'hans/assets/proj/taskmobile.png', caption: 'Mobile View' },
+            { src: 'hans/assets/proj/app1.png', caption: 'Mobile View' },
+            { src: 'hans/assets/proj/app2.png', caption: 'Mobile View' },
+            { src: 'hans/assets/proj/app3.png', caption: 'Mobile View' }
         ]
     };
 
@@ -309,19 +309,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const certificateData = {
         'nc3': {
             title: 'National Certificate III',
-            image: 'hans/proj/nc3.jpg', // Updated image path
+            image: 'hans/assets/proj/nc3.jpg', // Updated image path
             date: 'Issued: July 6, 2023',
             description: 'National Certificate III in Event Management Services. This certification confirms skills in organizing events, managing logistics, handling clients, and supporting technical aspects of event operations.'
         },
         'drrmo': {
             title: 'DRRMO Training Certificate',
-            image: 'hans/proj/drrmo.jpg', // Updated image path
+            image: 'hans/assets/proj/drrmo.jpg', // Updated image path
             date: 'Issued: August 30, 2022',
             description: 'Disaster Risk Reduction Management Office certification for emergency response and preparedness. This training covered disaster prevention, mitigation, response, and recovery procedures.'
         },
         'resume': {
             title: 'Professional Resume',
-            image: 'hans/js/resume.pdf',
+            image: 'hans/assets/cert/resume.pdf',
             date: 'Last Updated: April 2025',
             description: 'My professional resume detailing work experience, skills, and educational background.'
         }
@@ -346,7 +346,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Special handling for resume
             if (certificateId === 'resume') {
-                window.open('hans/js/resume.pdf', '_blank');
+                window.open('resume.pdf', '_blank');
                 return;
             }
             
