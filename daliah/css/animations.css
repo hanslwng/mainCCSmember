@@ -1,0 +1,567 @@
+/* Fade-in animation for sections */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Floating animation for profile picture */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Gradient text animation */
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Apply animations to existing elements */
+.section {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.profile-pic {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Name visibility fix */
+.name {
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(270deg, #c084fc, #a78bfa, #818cf8);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientFlow 3s ease infinite;
+    display: inline-block;
+}
+
+/* Enhanced hover effects */
+.nav-links a:hover {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
+}
+
+.skill {
+    position: relative;
+    border: 2px solid #c084fc;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    animation: borderGlow 3s infinite;
+}
+
+.skill::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, 
+        rgba(192, 132, 252, 0.1) 0%,
+        rgba(167, 139, 250, 0.05) 50%,
+        transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Add icons using pseudo-elements */
+.skill::after {
+    font-family: 'Arial';
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #c084fc, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.9;
+}
+
+/* Custom icons for each skill */
+.skill:nth-child(1)::after { content: '🌐'; } /* HTML5 */
+.skill:nth-child(2)::after { content: '🎨'; } /* CSS */
+.skill:nth-child(3)::after { content: '⚡'; } /* JavaScript */
+.skill:nth-child(4)::after { content: '🔧'; } /* XAMPP */
+.skill:nth-child(5)::after { content: '📊'; } /* MySQL */
+
+.skill:hover {
+    animation: skillPulse 1.5s ease-in-out infinite;
+    background: rgba(192, 132, 252, 0.1);
+}
+
+.skill:hover::before {
+    opacity: 1;
+}
+
+/* Add floating numbers behind skills */
+.skill {
+    counter-increment: skill;
+}
+
+.skill::before {
+    content: '0' counter(skill);
+    position: absolute;
+    font-size: 4rem;
+    font-weight: bold;
+    opacity: 0.1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+/* Skill text enhancement */
+.skill {
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Add skill progress indicator */
+.skill::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #c084fc, #a78bfa);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.skill:hover::after {
+    transform: scaleX(1);
+}
+
+/* Add floating particles around skills */
+@keyframes particleFloat {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(5px, -5px) rotate(180deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+.skill::before {
+    content: '•';
+    position: absolute;
+    font-size: 1.5rem;
+    color: rgba(192, 132, 252, 0.3);
+    pointer-events: none;
+}
+
+.skill:hover::before {
+    animation: particleFloat 3s infinite;
+}
+
+/* Skills grid enhancement */
+.skills-grid {
+    perspective: 1000px;
+}
+
+.skill {
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+.skill:hover {
+    transform: rotateY(10deg) rotateX(5deg);
+}
+
+/* Add skill level indicator */
+.skill {
+    --progress: 90%;
+    background: linear-gradient(180deg, 
+        rgba(192, 132, 252, 0.1) var(--progress), 
+        rgba(26, 26, 26, 0.3) var(--progress)
+    );
+}
+
+/* Custom progress for each skill */
+.skill:nth-child(1) { --progress: 95%; }
+.skill:nth-child(2) { --progress: 90%; }
+.skill:nth-child(3) { --progress: 85%; }
+.skill:nth-child(4) { --progress: 80%; }
+.skill:nth-child(5) { --progress: 88%; }
+
+.project {
+    position: relative;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+/* Add tech stack tags */
+.project::before {
+    content: 'HTML • CSS • JavaScript';
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    font-size: 0.8rem;
+    background: #c084fc;
+    padding: 0.2rem 0.8rem;
+    border-radius: 15px;
+    color: #1a1a1a;
+}
+
+/* Project image overlay */
+.project-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.project-image::after {
+    content: 'View Project';
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(192, 132, 252, 0.9);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-image:hover::after {
+    opacity: 1;
+}
+
+/* Smooth scroll progress indicator */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, #c084fc, #a78bfa);
+    z-index: 1001;
+    transition: width 0.2s ease;
+}
+
+/* Add these to animations.css */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated background gradient */
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        rgba(192, 132, 252, 0.1),
+        rgba(167, 139, 250, 0.1),
+        rgba(129, 140, 248, 0.1)
+    );
+    animation: gradientMove 15s ease infinite;
+    z-index: 1;
+}
+
+@keyframes gradientMove {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Enhanced tagline animation */
+.tagline {
+    position: relative;
+    overflow: hidden;
+}
+
+.tagline::after {
+    content: '|';
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* Add a modern card layout */
+#about {
+    position: relative;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem;
+    background: rgba(42, 42, 42, 0.5);
+    box-shadow: 0 8px 32px rgba(192, 132, 252, 0.1);
+}
+
+/* Add decorative elements */
+#about::before {
+    content: '"';
+    position: absolute;
+    top: 0;
+    left: 20px;
+    font-size: 8rem;
+    opacity: 0.1;
+    font-family: serif;
+    color: #c084fc;
+}
+
+/* Social media links */
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.social-link {
+    font-size: 1.5rem;
+    color: #c084fc;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-5px);
+}
+
+/* Contact form styling */
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(42, 42, 42, 0.5);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 20px;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-links {
+        background: rgba(42, 42, 42, 0.95);
+        backdrop-filter: blur(10px);
+    }
+}
+
+/* Logo enhancement */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    position: relative;
+    padding: 0.5rem;
+}
+
+/* Logo hover effect */
+.logo::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(192, 132, 252, 0.1),
+        rgba(167, 139, 250, 0.1)
+    );
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.logo:hover::before {
+    opacity: 1;
+}
+
+/* Text shadow enhancement */
+.logo {
+    text-shadow: 
+        0 0 10px rgba(192, 132, 252, 0.3),
+        0 0 20px rgba(167, 139, 250, 0.2);
+}
+
+/* Skill icons enhancement */
+.skill {
+    position: relative;
+    padding-top: 3.5rem;
+}
+
+.skill::before {
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands";
+    font-weight: 900;
+    font-size: 2rem;
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #c084fc, #a78bfa);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.9;
+}
+
+/* Individual skill icons */
+.skill:nth-child(1)::before {
+    content: '\f13b'; /* HTML5 icon */
+}
+
+.skill:nth-child(2)::before {
+    content: '\f13c'; /* CSS3 icon */
+}
+
+.skill:nth-child(3)::before {
+    content: '\f3b9'; /* JavaScript icon */
+}
+
+.skill:nth-child(4)::before {
+    content: '\f1e6'; /* XAMPP/Server icon */
+}
+
+.skill:nth-child(5)::before {
+    content: '\f1c0'; /* MySQL icon */
+}
+
+/* Icon hover animation */
+.skill:hover::before {
+    animation: bounce 0.6s ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-10px); }
+}
+
+/* About section visual enhancements */
+.about-content {
+    background: rgba(42, 42, 42, 0.5);
+    border-radius: 24px;
+    padding: 2.5rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(192, 132, 252, 0.1);
+    border: 1px solid rgba(192, 132, 252, 0.1);
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.bio, .career-goals, .interests {
+    position: relative;
+    padding: 1.5rem;
+    background: rgba(26, 26, 26, 0.3);
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+}
+
+.bio:hover, .career-goals:hover, .interests:hover {
+    transform: translateY(-2px);
+}
+
+.about-text h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #c084fc;
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.about-text h3::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #c084fc, transparent);
+}
+
+.about-text p {
+    line-height: 1.8;
+    color: #f5f5f5;
+    opacity: 0.9;
+    font-size: 1.05rem;
+    margin-top: 0.5rem;
+}
+
+.about-image {
+    position: relative;
+    margin-top: 2rem;
+}
+
+.professional-pic {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(192, 132, 252, 0.15);
+    transition: all 0.3s ease;
+    border: 2px solid rgba(192, 132, 252, 0.2);
+    object-fit: cover;
+}
+
+.professional-pic:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(192, 132, 252, 0.2);
+}
+
+/* Add decorative elements */
+.bio::before,
+.career-goals::before,
+.interests::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg,
+        rgba(192, 132, 252, 0.05),
+        rgba(167, 139, 250, 0.05)
+    );
+    border-radius: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.bio:hover::before,
+.career-goals:hover::before,
+.interests:hover::before {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-content {
+        padding: 1.5rem;
+    }
+
+    .about-text {
+        gap: 1.5rem;
+    }
+
+    .bio, .career-goals, .interests {
+        padding: 1.25rem;
+    }
+
+    .professional-pic {
+        max-width: 100%;
+        margin: 1rem auto;
+    }
+}
