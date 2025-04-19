@@ -1,0 +1,538 @@
+/* Global Styles */
+body {
+  background: url("images/teysbg.webp") no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.3); /* semi-transparent */
+  backdrop-filter: blur(10px); /* adds the blur effect */
+  -webkit-backdrop-filter: blur(2px); /* Safari support */
+  padding: 20px 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 35px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 19px;
+}
+
+/* Navbar */
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header .navbar {
+  margin-left: 1000px;
+}
+
+.navbar li {
+  margin-left: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #f4d03f;
+}
+
+/* Main Container */
+main {
+  padding: 40px 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  max-width: 1000px;
+  margin: 30px auto 0 auto;
+  border-radius: 20px;
+}
+
+/* Description Section */
+.description h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.description p {
+  max-width: 650px;
+  line-height: 1.6;
+}
+
+/* Profile Picture */
+.pfp {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.pfp img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Languages Section */
+.lang h2 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.lang p {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Projects Section */
+.projects-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #f4d03f;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Each Project Box */
+.project {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.project img {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  margin-bottom: 15px;
+}
+
+.project h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #f4d03f;
+}
+
+.project p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Profile Picture Hover Effect */
+.pfp-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-image: url("asdfg.jpg");
+  background-size: cover;
+  background-position: center;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  transition: background-image 0.5s ease, transform 0.3s ease;
+}
+
+.pfp-img:hover {
+  background-image: url("images/soteys.jpg");
+  transform: scale(1.1); /* Makes it grow slightly */
+}
+
+/* Skills Section */
+.skills {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.skills-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #f4d03f;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skill-box {
+  flex: 1 1 200px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  padding: 20px;
+  min-width: 200px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.skill-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.skill-box h3 {
+  margin-bottom: 10px;
+  color: #f4d03f;
+}
+
+.skill-box p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.skill-percent {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background-color: rgba(244, 208, 63, 0.8); /* yellowish glow */
+  color: black;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.skill-box:hover .skill-percent {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Tools Section */
+.tools-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow the items to wrap when space is tight */
+  gap: 30px; /* This will create a larger gap between the items */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tool-box {
+  position: relative;
+  flex: 1 1 220px; /* Increased the minimum width to prevent cramped items */
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  padding: 30px; /* Increased padding for more space around text and icons */
+  min-width: 220px;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the content vertically */
+  text-align: center; /* Ensures text is centered */
+  gap: 15px; /* Adds space between the icon and text */
+}
+
+.tool-icon {
+  width: 60px; /* Increased size of the icon */
+  height: 60px; /* Increased size of the icon */
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tool-icon img {
+  width: 60px; /* Adjusted image size to fit better inside the larger icon */
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.tool-box h3 {
+  margin-bottom: 10px;
+  color: #f4d03f;
+  font-size: 18px; /* Slightly increased font size */
+}
+
+.tool-box p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.tool-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  border-color: #f4d03f;
+}
+
+/* Contacts Section */
+.contact {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #f4d03f;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.contact-link:hover {
+  transform: translateY(-5px);
+  color: #f4d03f;
+}
+
+.contact-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.contact-link p {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Footer */
+.footer {
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 12px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 60px; /* Adds some space from the previous content */
+  box-sizing: border-box; /* Ensures padding does not affect width */
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Ensures the footer stays inside the main container */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures body takes at least the full height */
+}
+
+main {
+  flex-grow: 1; /* Makes the main content area grow and push the footer to the bottom */
+}
+
+/* Hidden Animation */
+.section {
+  opacity: 0;
+  transform: translateY(50px); /* Move sections below the viewport */
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0); /* Bring the section back into place */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin-left: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: all 0.3s ease; /* Smooth transition for color and background */
+  position: relative; /* To create space for the underline */
+}
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px; /* Thickness of the underline */
+  background-color: #f4d03f; /* Color of the underline */
+  transition: width 0.3s ease; /* Smooth underline animation */
+}
+
+.navbar a:hover {
+  color: #f4d03f; /* Change text color on hover */
+  background-color: rgba(244, 208, 63, 0.1); /* Slight yellow background on hover */
+  transform: scale(1.1); /* Slightly enlarge the text */
+}
+
+.navbar a:hover::after {
+  width: 100%; /* Full underline on hover */
+}
+
+.navbar a:active {
+  transform: scale(1); /* Reset scaling when clicked */
+}
+
+/* Navbar for smaller screens */
+@media (max-width: 768px) {
+  .navbar ul {
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .navbar ul.show {
+      display: flex;
+  }
+
+  .navbar li {
+      margin-left: 0;
+  }
+
+  .navbar .hamburger {
+      display: flex;
+  }
+
+  .navbar a {
+      font-size: 18px;
+      color: #fff;
+  }
+
+  .navbar a:hover {
+      color: #f4d03f;
+  }
+}
+.cv-button {
+  margin-left: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(244, 208, 63, 0.8); /* yellow circle */
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 255px;
+}
+
+.cv-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cv-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.cv-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cv-content img {
+  width: auto;
+  height: auto;
+  max-width: 60vw; /* was 90% */
+  max-height: 85vh; /* was 90% */
+  border: 5px solid white;
+  border-radius: 10px;
+  object-fit: contain;
+  aspect-ratio: 1 / 1.41; /* maintain A4 ratio */
+}
+
+.close-btn {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+

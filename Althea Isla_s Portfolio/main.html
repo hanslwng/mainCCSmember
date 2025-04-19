@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Althea Isla's Portfolio</title>
+  <link rel="stylesheet" href="mainstyles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Althea Isla's Portfolio</h1>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">My Work</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="pfp section" id="home">
+      <!-- Profile Picture content -->
+      <div class="pfp-img"></div>
+
+      
+        <button class="cv-button" onclick="showCV()">
+          📄
+        </button>
+      </div>
+      
+      
+    
+      
+    </section>
+
+    <section class="lang section">
+      <!-- Languages content -->
+      <h2>These are the programming languages I use</h2>
+      <p>
+        I work with several programming languages that each serve different purposes. Python is my go-to for scripting, automation, and data processing due to its simplicity and readability. C# is great for building Windows applications and game development with Unity. For web development, I use HTML to structure content, CSS to style and design pages, and Java for backend logic or Android app development.
+      </p>
+    </section>
+
+    <section class="projects section" id="projects">
+      <!-- Projects content -->
+      <h2 class="projects-title">Featured Projects</h2>
+      <div class="project">
+        <img src="parteyz.png" alt="Parteyz Catering Reservation System" />
+        <h3>Parteyz Catering Reservation System</h3>
+        <p>
+          Parteyz is a Java-based catering and decoration reservation system that allows users to select their preferred time, date, venue, and menu options. It helps streamline event planning and offers a user-friendly interface for personalized events.
+        </p>
+      </div>
+
+      <div class="project">
+        <img src="rad_logo.jpg" alt="R.A.D Enterprise E-Commerce Website" />
+        <h3>R.A.D Enterprise</h3>
+        <p>
+          R.A.D Enterprise is an e-commerce platform offering a smooth and responsive shopping experience. Built using Python, it features product browsing, cart management, and secure checkout — all optimized for cross-device accessibility.
+        </p>
+      </div>
+
+      <div class="project">
+        <img src="plotpad_logo.jpg" alt="Plotpad Android App for Writers" />
+        <h3>Plotpad</h3>
+        <p>
+          Plotpad is an Android app for writers to create, save drafts, and publish stories. Readers can browse content and give feedback. Developed in Java using Android Studio, it fosters creativity and mobile storytelling.
+        </p>
+      </div>
+    </section>
+
+    <section class="skills section" id="skills">
+      <!-- Skills content -->
+      <h2 class="skills-title">My Skills</h2>
+      <div class="skills-container">
+        <div class="skill-box">
+          <h3>Python</h3>
+          <p>Automation, scripting, and data analysis with clean, readable code.</p>
+          <span class="skill-percent">60%</span>
+        </div>
+        <div class="skill-box">
+          <h3>HTML & CSS</h3>
+          <p>Creating responsive layouts with modern styling techniques.</p>
+          <span class="skill-percent">90%</span>
+        </div>
+        <div class="skill-box">
+          <h3>Java</h3>
+          <p>Used for backend development and building Android apps in Android Studio.</p>
+          <span class="skill-percent">60%</span>
+        </div>
+        <div class="skill-box">
+          <h3>C#</h3>
+          <p>Developing Windows apps and games using Unity and .NET framework.</p>
+          <span class="skill-percent">100%</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="tools section">
+      <!-- Tools content -->
+      <h2 class="tools-title">Tools I Use</h2>
+      <div class="tools-container">
+        <div class="tool-box">
+          <div class="tool-icon">
+            <img src="images/aspic.jpg" alt="Android Studio" />
+          </div>
+          <h5>Android Studio</h5>
+          <p>IDE for Android app development with a robust set of tools and features.</p>
+        </div>
+        <div class="tool-box">
+          <div class="tool-icon">
+            <img src="images/vspic.jpg" alt="VSCode" />
+          </div>
+          <h5>VSCode</h5>
+          <p>Lightweight code editor with extensions for almost any language or framework.</p>
+        </div>
+        <div class="tool-box">
+          <div class="tool-icon">
+            <img src="images/xampplogo.png" alt="XAMPP" />
+          </div>
+          <h5>XAMPP</h5 >
+          <p>Software package for testing PHP and MySQL locally with Apache server.</p>
+        </div>
+        <div class="tool-box">
+          <div class="tool-icon">
+            <img src="images/netbeanslogo.png" alt="NetBeans" />
+          </div>
+          <h5>NetBeans</h5>
+          <p>Open-source IDE used for Java, PHP, and C++ development.</p>
+        </div>
+        <div class="tool-box">
+          <div class="tool-icon">
+            <img src="images/sqlyoglogo.jpg" alt="SQLyog" />
+          </div>
+          <h5>SQLyog</h5>
+          <p>Database management tool for MySQL with a user-friendly interface.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="contact section" id="contact">
+      <!-- Contact content -->
+      <h2 class="contact-title">Contact Me</h2>
+      <div class="contact-links">
+        <a href="https://www.facebook.com/althearuth.isla.16" target="_blank" class="contact-link">
+          <div class="contact-icon">
+            <i class="fab fa-facebook-f"></i>
+          </div>
+          <p>Facebook</p>
+        </a>
+        <a href="https://www.instagram.com/arv_165/" target="_blank" class="contact-link">
+          <div class="contact-icon">
+            <i class="fab fa-instagram"></i>
+          </div>
+          <p>Instagram</p>
+        </a>
+        <a href="https://github.com/Altheaa16" target="_blank" class="contact-link">
+          <div class="contact-icon">
+            <i class="fab fa-github"></i>
+          </div>
+          <p>GitHub</p>
+        </a>
+        <a href="mailto:islaalthea20@gmail.com" class="contact-link">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <p>Email</p>
+        </a>
+      </div>
+    </section>
+
+    <section>
+
+      
+
+      <!-- Hidden CV Image -->
+      <div id="cv-popup" class="cv-popup">
+        <div class="cv-content">
+          <span class="close-btn" onclick="hideCV()">×</span>
+          <img src="images/aa.png" alt="Curriculum Vitae" />
+        </div>
+      </div>
+    </section>
+    
+
+    <footer class="footer section">
+      <!-- Footer content -->
+      <p>&copy; 2025 Althea Isla. All Rights Reserved.</p>
+    </footer>
+
+  </main>
+
+  <!-- Add the script tag here to link your JavaScript file -->
+  <script src="mainscript.js"></script>
+
+</body>
+</html>
