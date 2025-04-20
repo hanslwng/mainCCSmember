@@ -3,241 +3,652 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Portfolio</title>
-    <link rel="stylesheet" href="arlou/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Arlou Anievas</title>
+    <link rel="icon" type="image/x-icon" href="assets/image/icon.png">
+    <link rel="stylesheet" href="arlou/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="nav">
-        <div class="nav-logo">Portfolio</div>
-        <div class="nav-links">
-            <a href="#home" class="nav-link">Home</a>
-            <a href="#about" class="nav-link">About</a>
-            <a href="#skills" class="nav-link">Skills</a>
-            <a href="#projects" class="nav-link">Projects</a>
-            <a href="#contact" class="nav-link">Contact</a>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="logo-letter">A</div>
+            <div class="loading-bar"></div>
         </div>
-    </nav>
+    </div>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="glitch" data-text="John Doe">Arlou Anievas</h1>
-            <p class="subtitle">Full Stack Developer & Designer</p>
-            <div class="cta-buttons">
-                <a href="#contact" class="cta-button">Contact Me</a>
-                <a href="#projects" class="cta-button secondary">View Work</a>
-            </div>
-        </div>
-        <div class="cube-wrapper">
-            <div class="cube">
-                <div class="face front"></div>
-                <div class="face back"></div>
-                <div class="face right"></div>
-                <div class="face left"></div>
-                <div class="face top"></div>
-                <div class="face bottom"></div>
-            </div>
-        </div>
-    </section>
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
 
-    <section id="about" class="about">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>Hello! I'm a passionate developer and designer with a keen interest in creating beautiful and functional web experiences. I specialize in building responsive and user-friendly applications.</p>
-                <p>My expertise spans both front-end and kinda in back-end development, along with proficiency in various design tools. I believe in creating solutions that not only solve problems but also provide an exceptional user experience.</p>
-                <div class="tech-stack">
-                    <span class="tech-badge">Web Development</span>
-                    <span class="tech-badge">UI/UX Design</span>
-                    <span class="tech-badge">Video Editing</span>
-                    <span class="tech-badge">Database Management</span>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                    <li><a href="#goals" class="nav-link">Goals</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-close" id="nav-close">
+                    <i class="fas fa-times"></i>
                 </div>
             </div>
-            <div class="about-image">
-                <img src="arlou/img/arlou.jpg" class="image-placeholder"></div>
+            <div class="nav-toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
             </div>
-        </div>
-    </section>
+        </nav>
+    </header>
 
-    <section id="skills" class="skills">
-        <h2 class="section-title">Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card" data-tilt>
-                <i class="fab fa-html5 skill-icon"></i>
-                <h3>HTML5</h3>
-                <div class="skill-level">
-                    <div class="skill-progress" style="width: 95%"></div>
+    <!-- Main -->
+    <main class="main">
+        <!-- Home -->
+        <section class="home section" id="home">
+            <div id="particles-js"></div>
+            <div class="home-container container">
+                <div class="home-content">
+                    <div class="home-subtitle" data-aos="fade-up">
+                        <span class="line"></span>
+                        <span class="text">Web Developer & Designer</span>
+                        <span class="line"></span>
+                    </div>
+                    <h1 class="home-title" data-aos="fade-up" data-aos-delay="100">
+                        Hi, I'm <span class="gradient-text">Arlou Anievas</span>
+                    </h1>
+                    <p class="home-description" data-aos="fade-up" data-aos-delay="200">
+                        <span class="typed-text"></span>
+                    </p>
+                    <div class="home-buttons" data-aos="fade-up" data-aos-delay="300">
+                        <a href="#contact" class="button button-primary">
+                            <i class="fas fa-paper-plane"></i> Contact Me
+                            <span class="button-shine"></span>
+                        </a>
+                        <a href="#projects" class="button button-ghost">
+                            <i class="fas fa-eye"></i> View Projects
+                        </a>
+                    </div>
+                    <div class="home-social" data-aos="fade-up" data-aos-delay="350">
+                        <a href="https://github.com/Arlou-ctrl" target="_blank" class="home-social-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#contact" class="home-social-link" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                    <div class="home-scroll" data-aos="fade-up" data-aos-delay="400">
+                        <a href="#about" class="scroll-link">
+                            <div class="mouse">
+                                <span class="wheel"></span>
+                            </div>
+                            <span class="scroll-text">Scroll Down</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="home-shape">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="var(--first-color-lighter)" d="M47.5,-67.2C60.5,-59.3,69.3,-43.9,74.3,-27.2C79.3,-10.5,80.5,7.4,75.8,23.2C71.1,39,60.5,52.7,46.6,61.5C32.7,70.3,15.4,74.2,-1.2,75.8C-17.8,77.4,-35.6,76.7,-48.2,67.8C-60.8,58.9,-68.2,42,-73.2,24.4C-78.2,6.8,-80.8,-11.4,-75.8,-27.5C-70.8,-43.6,-58.2,-57.5,-43.5,-64.8C-28.8,-72.1,-12.1,-72.8,3.2,-77.4C18.5,-82,37,-75.1,47.5,-67.2Z" transform="translate(100 100)" />
+                    </svg>
                 </div>
             </div>
-            <div class="skill-card" data-tilt>
-                <i class="fab fa-css3-alt skill-icon"></i>
-                <h3>CSS3</h3>
-                <div class="skill-level">
-                    <div class="skill-progress" style="width: 90%"></div>
-                </div>
-            </div>
-            <div class="skill-card" data-tilt>
-                <i class="fab fa-js skill-icon"></i>
-                <h3>JavaScript</h3>
-                <div class="skill-level">
-                    <div class="skill-progress" style="width: 85%"></div>
-                </div>
-            </div>
-            <div class="skill-card" data-tilt>
-                <i class="fas fa-database skill-icon"></i>
-                <h3>MySQL</h3>
-                <div class="skill-level">
-                    <div class="skill-progress" style="width: 80%"></div>
-                </div>
-            </div>
-            <div class="skill-card" data-tilt>
-                <i class="fab fa-java skill-icon"></i>
-                <h3>Java</h3>
-                <div class="skill-level">
-                    <div class="skill-progress" style="width: 75%"></div>
-                </div>
-            </div>
-            <div class="skill-card" data-tilt>
-                <i class="fab fa-python skill-icon"></i>
-                <h3>Python</h3>
-                <div class="skill-level">
-                    <div class="skill-progress" style="width: 70%"></div>
-                </div>
-            </div>
-            <div class="skill-card" data-tilt>
-                <i class="fab fa-windows skill-icon"></i>
-                <h3>C#</h3>
-                <div class="skill-level">
-                    <div class="skill-progress" style="width: 75%"></div>
-                </div>
-            </div>
-            <div class="skill-card" data-tilt>
-                <i class="fas fa-server skill-icon"></i>
-                <h3>XAMPP</h3>
-                <div class="skill-level">
-                    <div class="skill-progress" style="width: 85%"></div>
-                </div>
-            </div>
-            <div class="skill-card" data-tilt>
-                <i class="fas fa-pen-nib skill-icon"></i>
-                <h3>Figma</h3>
-                <div class="skill-level">
-                    <div class="skill-progress" style="width: 80%"></div>
-                </div>
-            </div>
-            <div class="skill-card" data-tilt>
-                <i class="fas fa-film skill-icon"></i>
-                <h3>CapCut</h3>
-                <div class="skill-level">
-                    <div class="skill-progress" style="width: 85%"></div>
-                </div>
-            </div>
-            <div class="skill-card" data-tilt>
-                <i class="fas fa-video skill-icon"></i>
-                <h3>After Effects</h3>
-                <div class="skill-level">
-                    <div class="skill-progress" style="width: 75%"></div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="projects" class="projects">
-        <h2 class="section-title">Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="arlou/img/halou.jpg" alt="E-Commerce Platform">
-                </div>
-                <h3> Haloupee E-Commerce Platform</h3>
-                <p>Haloupee is a e-commerce site offering trendy products, smooth shopping, and secure, fast checkout for a great online experience.</p>
-                <div class="project-tech">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>MySQL</span>
-                </div>
-                <div class="project-links">
-                    <a href="#" class="project-link">Live Demo</a>
-                    <a href="https://github.com/Arlou-ctrl/Haloupee-E-Commerce" class="project-link">Source Code</a>
+        <!-- About -->
+        <section class="about section" id="about">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">About Me</h2>
+                <div class="about-container">
+                    <div class="about-img" data-aos="fade-right">
+                        <img src="arlou/assets/image/arlou.jpg" alt="Arlou Anievas">
+                    </div>
+                    <div class="about-content" data-aos="fade-left">
+                        <p class="about-description">
+                            I'm Arlou Anievas, a second-year BS Information Technology student at Laguna State Polytechnic University, passionate about web development and design. I enjoy creating user-friendly and visually appealing digital experiences while continuously building my skills in programming, UI/UX design, and software development. Aside from academics, I'm Content Creator In Tiktok where I develop creativity, and collaboration all of which fuel my goal of becoming a skilled and versatile web developer.
+                        </p>
+                        <div class="about-info">
+                            <div class="info-box" data-aos="fade-up" data-aos-delay="100">
+                                <i class="fas fa-graduation-cap"></i>
+                                <h3>Education</h3>
+                                <p>IT Student</p>
+                            </div>
+                            <div class="info-box" data-aos="fade-up" data-aos-delay="200">
+                                <i class="fas fa-briefcase"></i>
+                                <h3>Completed</h3>
+                                <p>5 Projects</p>
+                            </div>
+                            <div class="info-box" data-aos="fade-up" data-aos-delay="300">
+                                <i class="fab fa-tiktok"></i>
+                                <h3>Content Creator</h3>
+                                <p>TikTok</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="arlou/img/matt.jpg" alt="Social Media Dashboard">
-                </div>
-                <h3>TaskMatrix</h3>
-                <p>TaskMatrix is an advanced to-do list app with smart organization, priority tags, and collaboration tools to boost productivity.</p>
-                <div class="project-tech">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>MySQL</span>
-                    <span>JS</span>
-                </div>
-                <div class="project-links">
-                    <a href="#" class="project-link">Live Demo</a>
-                    <a href="https://github.com/Arlou-ctrl/TaskMatrix" class="project-link">Source Code</a>
-                </div>
-            </div>
+        <!-- Education -->
+        <section class="education section" id="education">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Education</h2>
+                <div class="education-container">
+                    <div class="timeline">
+                        <div class="timeline-item" data-aos="fade-right">
+                            <div class="timeline-content card">
+                                <span class="timeline-date">2024 - Present</span>
+                                <h3 class="timeline-title">Bachelor of Science in Information Technology</h3>
+                                <p class="timeline-description">Laguna State Polytechnic University</p>
+                                <p class="timeline-location">Main Campus, Sta. Cruz, Laguna</p>
+                                <div class="timeline-details">
+                                    <ul>
+                                        <li>Major in Web Development</li>
+                                        <li>Dean's Lister</li>
+                                        <li>Active member of IT Society</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="arlou/img/part.jpg" alt="Portfolio Website">
-                </div>
-                <h3>Parteyz Catering Service</h3>
-                <p>Parteyz is a catering service delivering delicious menus, seamless event setups, and reliable service for any celebration.</p>
-                <div class="project-tech">
-                    <span>Java</span>
-                    <span>Xampp</span>
-                    <span>JavaScript</span>
-                    <span>Mysql</span>
-                </div>
-                <div class="project-links">
-                    <a href="#" class="project-link">Live Demo</a>
-                    <a href="https://github.com/Arlou-ctrl/Parteyz-Catering" class="project-link">Source Code</a>
-                </div>
-            </div>
-        </div>
-    </section>
+                        <div class="timeline-item" data-aos="fade-left">
+                            <div class="timeline-content card">
+                                <span class="timeline-date">2021 - 2023</span>
+                                <h3 class="timeline-title">Senior High School</h3>
+                                <p class="timeline-description">Moreh Academy</p>
+                                <p class="timeline-location">Victoria, Laguna</p>
+                                <div class="timeline-details">
+                                    <ul>
+                                        <li>ICT Strand</li>
+                                        <li>Academic Excellence Awardee</li>
+                                        <li>Student Council Officer</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
-    <section id="contact" class="contact">
-        <h2 class="section-title">Contact Me</h2>
-        <form id="contact-form" class="contact-form">
-            <div class="form-group">
-                <input type="text" id="name" name="name" required placeholder="Your Name">
+                        <div class="timeline-item" data-aos="fade-right">
+                            <div class="timeline-content card">
+                                <span class="timeline-date">2016 - 2020</span>
+                                <h3 class="timeline-title">Junior High School</h3>
+                                <p class="timeline-description">San Francisco Integrated National High School</p>
+                                <p class="timeline-location">San Francisco, Laguna</p>
+                                <div class="timeline-details">
+                                    <ul>
+                                        <li>With Honors</li>
+                                        <li>Science Club Member</li>
+                                        <li>School Paper Writer</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <input type="email" id="email" name="email" required placeholder="Your Email">
-            </div>
-            <div class="form-group">
-                <textarea id="message" name="message" required placeholder="Your Message"></textarea>
-            </div>
-            <button type="submit" class="submit-button">
-                <span>Send Message</span>
-                <i class="fas fa-paper-plane"></i>
-            </button>
-        </form>
-    </section>
+        </section>
 
+        <!-- Certificates -->
+        <section class="certificates section" id="certificates">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Certificates</h2>
+                <div class="certificates-container grid">
+                    <!-- Certificate Card 1 -->
+                    <div class="certificate-card card" data-aos="fade-up">
+                        <div class="certificate-preview">
+                            <embed src="arlou/assets/certificates/certificate1.pdf" type="application/pdf" class="pdf-preview">
+                            <div class="certificate-overlay">
+                                <a href="arlou/assets/certificates/certificate1.pdf" class="certificate-btn" download>
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <a href="arlou/assets/certificates/certificate1.pdf" class="certificate-btn" target="_blank">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="certificate-data">
+                            <h3 class="certificate-title">Design for Freelancing</h3>
+                            <p class="certificate-description">Comprehensive Design Training during Freelance Webinar</p>
+                            <div class="certificate-meta">
+                                <span><i class="fas fa-calendar"></i> 2024</span>
+                                <span><i class="fas fa-award"></i> Freelance Webinar</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificate Card 2 -->
+                    <div class="certificate-card card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="certificate-preview">
+                            <embed src="arlou/assets/certificates/certificate2.pdf" type="application/pdf" class="pdf-preview">
+                            <div class="certificate-overlay">
+                                <a href="arlou/assets/certificates/certificate2.pdf" class="certificate-btn" download>
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <a href="arlou/assets/certificates/certificate2.pdf" class="certificate-btn" target="_blank">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="certificate-data">
+                            <h3 class="certificate-title">Top 10 TikTok Content Creator</h3>
+                            <p class="certificate-description">Achieved highest follower growth in 2-week challenge</p>
+                            <div class="certificate-meta">
+                                <span><i class="fas fa-trophy"></i> Top 10 Ranking</span>
+                                <span><i class="fab fa-tiktok"></i> TikTok</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificate Card 3 -->
+                    <div class="certificate-card card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="certificate-preview">
+                            <embed src="arlou/assets/certificates/certificate3.pdf" type="application/pdf" class="pdf-preview">
+                            <div class="certificate-overlay">
+                                <a href="arlou/assets/certificates/certificate3.pdf" class="certificate-btn" download>
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <a href="arlou/assets/certificates/certificate3.pdf" class="certificate-btn" target="_blank">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="certificate-data">
+                            <h3 class="certificate-title">Top 20 UI/UX Junior Designer</h3>
+                            <p class="certificate-description">Recognized among the best junior UI/UX designers</p>
+                            <div class="certificate-meta">
+                                <span><i class="fas fa-medal"></i> Top 20 Ranking</span>
+                                <span><i class="fas fa-paint-brush"></i> UI/UX Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Goals -->
+        <section class="goals section" id="goals">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">My Goals</h2>
+                <div class="goals-container grid">
+                    <div class="goal-card card" data-aos="fade-up">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3 class="goal-title">Master Full-Stack Development</h3>
+                        <p class="goal-description">Become proficient in both front-end and back-end technologies to build complete web applications.</p>
+                    </div>
+                    <div class="goal-card card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3 class="goal-title">Enhance UI/UX Skills</h3>
+                        <p class="goal-description">Improve my design skills to create more intuitive and visually appealing interfaces.</p>
+                    </div>
+                    <div class="goal-card card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3 class="goal-title">Mobile App Development</h3>
+                        <p class="goal-description">Learn mobile app development to expand my skill set and create cross-platform applications.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="services section" id="services">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Services</h2>
+                <div class="services-container grid">
+                    <div class="service-card card" data-aos="fade-up">
+                        <i class="fas fa-code"></i>
+                        <h3 class="service-title">Web Development</h3>
+                        <p class="service-description">Custom website development with modern technologies and best practices.</p>
+                    </div>
+                    <div class="service-card card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-pencil-ruler"></i>
+                        <h3 class="service-title">UI/UX Design</h3>
+                        <p class="service-description">User-centered design solutions that enhance the user experience.</p>
+                    </div>
+                    <div class="service-card card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3 class="service-title">Responsive Design</h3>
+                        <p class="service-description">Mobile-first websites that work perfectly on all devices.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="projects section" id="projects">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Projects</h2>
+                
+                <!-- Filter Buttons -->
+                <div class="projects-filters" data-aos="fade-up">
+                    <span class="projects-item-filter active" data-filter="all">All</span>
+                    <span class="projects-item-filter" data-filter="web">Web App</span>
+                    <span class="projects-item-filter" data-filter="mobile">Mobile</span>
+                    <span class="projects-item-filter" data-filter="design">Design</span>
+                </div>
+
+                <div class="projects-container grid">
+                    <div class="project-card" data-aos="fade-up" data-category="web">
+                        <div class="project-img-container">
+                            <img src="arlou/assets/image/halou.jpg" alt="Haloupee E-commerce" class="project-img">
+                        </div>
+                        <div class="project-data">
+                            <h3 class="project-title">Haloupee</h3>
+                            <p class="project-description">
+                                A modern e-commerce platform with a sleek user interface, secure payment integration, and real-time inventory management. Features include user authentication, product search with filters, shopping cart, and order tracking.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Xampp</span>
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Arlou-ctrl/Haloupee-E-Commerce" class="button button-ghost">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                                <a href="https://github.com/Arlou-ctrl/Haloupee-E-Commerce" class="button button-primary">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="100" data-category="mobile">
+                        <div class="project-img-container">
+                            <img src="arlou/assets/image/matt.jpg" alt="TaskMatrix App" class="project-img">
+                        </div>
+                        <div class="project-data">
+                            <h3 class="project-title">TaskMatrix</h3>
+                            <p class="project-description">
+                                Advanced task management application with integrated note-taking, reminders, and priority matrix. Features include calendar integration, collaborative workspaces, tags, and smart notifications.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">Xampp</span>
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Arlou-ctrl/TaskMatrix" class="button button-ghost">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                                <a href="https://github.com/Arlou-ctrl/TaskMatrix" class="button button-primary">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="200" data-category="design">
+                        <div class="project-img-container">
+                            <img src="arlou/assets/image/part.jpg" alt="Parteyz Catering" class="project-img">
+                        </div>
+                        <div class="project-data">
+                            <h3 class="project-title">Parteyz</h3>
+                            <p class="project-description">
+                                Comprehensive catering service platform with event planning integration. Features include menu customization, event scheduling, staff management, and real-time event coordination.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">Mysql</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Arlou-ctrl/Parteyz-Catering" class="button button-ghost">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                                <a href="https://github.com/Arlou-ctrl/Parteyz-Catering" class="button button-primary">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="skills section" id="skills">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Skills</h2>
+                <div class="skills-container">
+                    <div class="skills-content card" data-aos="fade-right">
+                        <h3 class="skills-title">Programming Languages</h3>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-java"></i>
+                                <span>Java</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-windows"></i>
+                                <span>C#</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills-content card" data-aos="fade-left">
+                        <h3 class="skills-title">Tools & Technologies</h3>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <i class="fas fa-server"></i>
+                                <span>XAMPP</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-database"></i>
+                                <span>MySQL</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-git-alt"></i>
+                                <span>Git</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-figma"></i>
+                                <span>Figma</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-video"></i>
+                                <span>CapCut</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-film"></i>
+                                <span>Adobe After Effects</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Contact Me</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="info-item card" data-aos="fade-right">
+                            <div class="info-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Phone</h3>
+                                <p>09938713178</p>
+                                <span class="info-label">Call me</span>
+                            </div>
+                        </div>
+                        <div class="info-item card" data-aos="fade-right" data-aos-delay="100">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Email</h3>
+                                <p>arlouanievas10@gmail.com</p>
+                                <span class="info-label">Write me</span>
+                            </div>
+                        </div>
+                        <div class="info-item card" data-aos="fade-right" data-aos-delay="200">
+                            <div class="info-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>GitHub</h3>
+                                <p>Arlou-ctrl</p>
+                                <span class="info-label">Follow me</span>
+                            </div>
+                        </div>
+                    </div>
+                    <form id="contact-form" class="contact-form card" data-aos="fade-left">
+                        <h3 class="form-title">Send Me a Message</h3>
+                        <div class="form-group">
+                            <div class="input-container">
+                                <i class="fas fa-user input-icon"></i>
+                                <input type="text" id="name" name="name" required>
+                                <label for="name">Your Name</label>
+                                <span class="focus-border"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-container">
+                                <i class="fas fa-envelope input-icon"></i>
+                                <input type="email" id="email" name="email" required>
+                                <label for="email">Your Email</label>
+                                <span class="focus-border"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-container">
+                                <i class="fas fa-comment-alt input-icon"></i>
+                                <input type="text" id="subject" name="subject" required>
+                                <label for="subject">Subject</label>
+                                <span class="focus-border"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-container textarea-container">
+                                <i class="fas fa-pencil-alt input-icon"></i>
+                                <textarea id="message" name="message" required></textarea>
+                                <label for="message">Your Message</label>
+                                <span class="focus-border"></span>
+                            </div>
+                        </div>
+                        <button type="submit" class="button button-primary submit-btn">
+                            <span class="submit-text">Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                            <div class="success-animation">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-info">
-                <h3>Arlou Anievas</h3>
-                <p>Full Stack Developer & Designer</p>
-            </div>
-            <div class="social-links">
-                <a href="https://github.com/Arlou-ctrl" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com/_hoshyy/" class="social-link"><i class="fab fa-instagram"></i></a>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-top">
+                    <div class="footer-logo-section">
+                        <a href="#" class="footer-logo">
+                            <span class="logo-circle"></span>
+                            Arlou<span class="logo-dot">.</span>
+                        </a>
+                        <p class="footer-description">Passionate web developer crafting beautiful and functional digital experiences.</p>
+                    </div>
+                    <div class="footer-links">
+                        <div class="footer-section">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#projects">Projects</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-section">
+                            <h3>Services</h3>
+                            <ul>
+                                <li><a href="#services">Web Development</a></li>
+                                <li><a href="#services">UI/UX Design</a></li>
+                                <li><a href="#services">Mobile Apps</a></li>
+                                <li><a href="#services">Responsive Design</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-middle">
+                    <div class="social-links">
+                        <a href="https://github.com/Arlou-ctrl" class="social-link" data-tooltip="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link" data-tooltip="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link" data-tooltip="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" data-tooltip="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="copyright">
+                        <p>&copy; 2024 Arlou Anievas. All rights reserved.</p>
+                    </div>
+                    <div class="footer-extra">
+                        <a href="#" class="footer-policy">Privacy Policy</a>
+                        <span class="separator">•</span>
+                        <a href="#" class="footer-terms">Terms of Service</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Arlou Anievas. All rights reserved.</p>
+        <div class="footer-shape">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="var(--first-color-lighter)" d="M47.5,-67.2C60.5,-59.3,69.3,-43.9,74.3,-27.2C79.3,-10.5,80.5,7.4,75.8,23.2C71.1,39,60.5,52.7,46.6,61.5C32.7,70.3,15.4,74.2,-1.2,75.8C-17.8,77.4,-35.6,76.7,-48.2,67.8C-60.8,58.9,-68.2,42,-73.2,24.4C-78.2,6.8,-80.8,-11.4,-75.8,-27.5C-70.8,-43.6,-58.2,-57.5,-43.5,-64.8C-28.8,-72.1,-12.1,-72.8,3.2,-77.4C18.5,-82,37,-75.1,47.5,-67.2Z" transform="translate(100 100)" />
+            </svg>
         </div>
     </footer>
 
-    <script src="arlou/main.js"></script>
+    <!-- Scroll to top button -->
+    <a href="#" class="scrolltop" id="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init({
+                publicKey: "A2-g2-x_XofKF73Hh"
+            });
+        })();
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="arlou/js/main.js"></script>
 </body>
-</html>
+</html> 
