@@ -1,6 +1,6 @@
 /* Page layout */
 body {
-  background: url('Althea Isla_s Portfolio/treehouse.jpg') no-repeat center center fixed;
+  background: url('treehouse.jpg') no-repeat center center fixed;
   background-size: cover;
   display: flex;
   justify-content: center;
