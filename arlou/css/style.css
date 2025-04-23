@@ -1631,4 +1631,133 @@ body {
     transform: translateY(-5px);
     background: rgba(255, 255, 255, 0.1);
     border-color: var(--gradient-start);
+}
+
+/* Moving Text Line */
+.moving-text-line {
+    width: 100%;
+    background: linear-gradient(90deg, var(--dark-blue), var(--light-blue));
+    overflow: hidden;
+    padding: 2rem 0;
+    margin: 4rem 0;
+    position: relative;
+    box-shadow: 0 0 30px rgba(0, 198, 255, 0.15);
+    border-top: 1px solid rgba(0, 198, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 198, 255, 0.1);
+}
+
+.moving-text-line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, 
+        var(--dark-blue) 0%,
+        transparent 20%,
+        transparent 80%,
+        var(--dark-blue) 100%
+    );
+    pointer-events: none;
+    z-index: 1;
+}
+
+.text-line-content {
+    display: flex;
+    align-items: center;
+    animation: moveText 25s linear infinite;
+    white-space: nowrap;
+}
+
+.text-item {
+    display: flex;
+    align-items: center;
+    color: var(--gradient-start);
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 3rem;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px rgba(0, 198, 255, 0.5),
+                 0 0 20px rgba(0, 198, 255, 0.3),
+                 0 0 30px rgba(0, 198, 255, 0.1);
+    position: relative;
+    padding: 0.5rem 1rem;
+}
+
+.text-item::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 40px;
+    background: linear-gradient(to bottom, transparent, var(--gradient-start), transparent);
+    right: -1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.line-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 1.5rem;
+    filter: drop-shadow(0 0 8px rgba(0, 198, 255, 0.8));
+}
+
+@keyframes moveText {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Add hover effect */
+.text-item:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    color: #00c6ff;
+    text-shadow: 0 0 10px rgba(0, 198, 255, 0.8),
+                 0 0 20px rgba(0, 198, 255, 0.6),
+                 0 0 30px rgba(0, 198, 255, 0.4);
+}
+
+.text-item:hover .line-icon {
+    filter: drop-shadow(0 0 12px rgba(0, 198, 255, 1));
+}
+
+/* Add responsive styles */
+@media screen and (max-width: 768px) {
+    .text-item {
+        font-size: 1.8rem;
+        margin: 0 2rem;
+    }
+    
+    .line-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .text-item::after {
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .text-item {
+        font-size: 1.4rem;
+        margin: 0 1.5rem;
+    }
+    
+    .line-icon {
+        width: 25px;
+        height: 25px;
+        margin-right: 1rem;
+    }
+
+    .text-item::after {
+        height: 25px;
+        right: -1rem;
+    }
 } 
